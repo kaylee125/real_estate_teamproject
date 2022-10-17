@@ -1,0 +1,4 @@
+{"is_success": "Fail", "type": "own_sex_age_transform", "err_msg": "Some of types cannot be determined after inferring"}
+{"is_success": "Fail", "type": "own_addr_transform", "err_msg": "Some of types cannot be determined after inferring"}
+{"is_success": "Fail", "type": "own_foreigner_transform", "date": "20221010", "err_msg": "Some of types cannot be determined after inferring"}
+{"is_success": "Fail", "type": "own_type_transform", "err_msg": "Some of types cannot be determined after inferring"}

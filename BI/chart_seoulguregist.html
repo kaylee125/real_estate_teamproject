@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lumino - Charts</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name" id="username">Username</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+
+		<ul class="nav menu">
+            <li><a href="chart_monthlyaptprc_avgprc.html"><em class="fa fa-bar-chart">&nbsp;</em> 월간 아파트 평균 매매가격</a></li>
+			<li><a href="chart_monthlyaptprc_avgprc_m2.html"><em class="fa fa-bar-chart">&nbsp;</em> 월간 아파트 제곱미터당 평균매매가격</a></li>
+			<li><a href="chart_sidoregist.html"><em class="fa fa-bar-chart">&nbsp;</em> 전국 17개 광역시도별 부동산 등기 수</a></li>
+			<li><a href="chart_seoulguregist.html"><em class="fa fa-bar-chart">&nbsp;</em> 서울시 자치구별 부동산 등기 수</a></li>
+			<li><a href="chart_ownregisttype.html"><em class="fa fa-bar-chart">&nbsp;</em> 전국 소유유형별 부동산 등기 수</a></li>
+			<li><a href="chart_seoulownregisttype.html"><em class="fa fa-bar-chart">&nbsp;</em> 서울시 소유유형별 부동산 등기 수</a></li>
+			<li><a href="chart_agesregist.html"><em class="fa fa-bar-chart">&nbsp;</em> 전국 연령대별 부동산 등기 수</a></li>
+			<li><a href="chart_seoulagesregist.html"><em class="fa fa-bar-chart">&nbsp;</em> 서울시 연령대별 부동산 등기 수</a></li>
+			<li><a href="chart_sexregist.html"><em class="fa fa-bar-chart">&nbsp;</em> 전국 성별 부동산 등기 수</a></li>
+			<li><a href="chart_seoulsexregist.html"><em class="fa fa-bar-chart">&nbsp;</em> 서울시 성별 부동산 등기 수</a></li>
+			<li><a href="chart_accselladrs.html"><em class="fa fa-bar-chart">&nbsp;</em> 광역시도별 누적 매도량</a></li>
+			<li><a href="chart_accbuyadrs.html"><em class="fa fa-bar-chart">&nbsp;</em> 광역시도별 누적 매수량</a></li>
+			<li><a href="chart_sellbuysudo.html"><em class="fa fa-bar-chart">&nbsp;</em> 수도권·비수도권 누적 매수매도량</a></li>
+			<li><a href="chart_sellsudoyear.html"><em class="fa fa-bar-chart">&nbsp;</em> 수도권 연도별 매도량</a></li>
+			<li><a href="chart_buysudoyear.html"><em class="fa fa-bar-chart">&nbsp;</em> 수도권 연도별 매수량</a></li>
+			<li><a href="chart_accsellbuytype.html"><em class="fa fa-bar-chart">&nbsp;</em> 소유유형별 누적 매수량</a></li>
+			<li><a href="chart_sellbuytypeyear.html"><em class="fa fa-bar-chart">&nbsp;</em> 소유유형별 연도별 매수량</a></li>
+			<li><a href="chart_accsellbuyages.html"><em class="fa fa-bar-chart">&nbsp;</em> 연령대별 누적 매수량</a></li>
+			<li><a href="chart_sellbuyagesyear.html"><em class="fa fa-bar-chart">&nbsp;</em> 연령대별 연도별 누적 매수량</a></li>
+			<li><a href="chart_sellbuysexyear.html"><em class="fa fa-bar-chart">&nbsp;</em> 성별 연도별 누적 매수량</a></li>
+			<li><a href="chart_accsellbuyforeign.html"><em class="fa fa-bar-chart">&nbsp;</em> 외국인국적별 누적 매수량</a></li>
+			<li><a href="login.html" id="btn_logout"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Charts</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header">서울시 자치구별 부동산 등기 수</h2>
+			</div>
+		</div><!--/.row-->
+
+		
+		<div class="row">
+			
+			<div class="col-lg-12">
+				<div class="input-group mt-5">
+					<!-- <span class="input-group-addon" id="basic-addon3"><label for="basic-url">Your API URL</label></span>
+					<input type="text" class="form-control" id="api-url" aria-describedby="basic-addon4"> -->
+					<!-- <span class="input-group-addon" id="basic-addon3">기준날짜</span>
+					<input type="date" class="form-control" id="std-date" aria-describedby="basic-addon3"> -->
+					<span class="input-group-addon btn btn-primary" id="btn_send">전송</span>
+				</div>
+
+				<div class="panel panel-default mt-3">
+					<div class="panel-heading">
+						Line Chart
+						<ul class="pull-right panel-settings panel-button-tab-right">
+							<li class="dropdown"><a class="pull-right dropdown-toggle" data-toggle="dropdown" href="#">
+								<em class="fa fa-cog"></em>
+							</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<ul class="dropdown-settings">
+											<li><a href="#" id="bar-chart">
+												<em class="fa fa-cog"></em> bar
+											</a></li>
+											<li class="divider"></li>
+											<li><a href="#" id="pie-chart">
+												<em class="fa fa-cog"></em> pie
+											</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="panel-body">
+						<div class="canvas-wrapper">
+							<div class="main-chart" id="chart" height="200" width="600"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->	  
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
+	<script>
+
+	let token = '';
+	let username = '';
+
+	const init = () => {
+		//localStorage에 값이 존재하지 않으면 로그인 페이지로
+		if(!localStorage.length){
+			location.href='/login.html'
+		}
+
+		token = localStorage.getItem('token')
+		username = localStorage.getItem('user')
+
+		document.querySelector('#username').textContent = username
+		
+		document.querySelector('#btn_logout').addEventListener('click', (e) => {
+			localStorage.clear();
+		})
+
+		// document.querySelector('#btn_send').addEventListener('click', (e) => {
+		// 	localStorage.clear();
+		// })
+	}
+
+	const renderChart = (res, type='bar') => {
+		console.dir(res);
+
+		regns = [];
+		tots = [];
+		rates = [];
+		for(key in res){
+			regns.push(res[key]['regn'])
+			tots.push(res[key]['tot'])
+			rates.push(res[key]['rate'] + '%')
+		}
+
+		trace = {};
+		trace.x = regns;
+		trace.y = tots;
+		trace.labels = regns;
+		trace.values = tots;
+		if (type == 'bar'){
+			trace.text = rates.map(String);
+		}
+		
+		trace.type = type;
+		
+		Plotly.newPlot('chart', [trace]);
+	}
+
+
+	const drawChart = (type) => {
+
+		getData('https://real-estate-analysis.cf/api/real_estate/seoulguregist/', {},
+					{'Content-Type': 'application/json', 'Authorization': 'Token ' + token}).then(res => {
+					renderChart(res, type)
+				})
+	}
+
+	window.onload = function () {
+
+		init()
+
+		document.querySelector('#btn_send').addEventListener('click', e => {
+			drawChart()
+		})
+
+		document.querySelector('#bar-chart').addEventListener('click', e => {
+			drawChart('bar')
+		})
+
+		document.querySelector('#pie-chart').addEventListener('click', e => {
+			drawChart('pie')
+		})
+
+
+	};
+	</script>	
+</body>
+</html>

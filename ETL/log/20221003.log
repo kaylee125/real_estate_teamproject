@@ -1,0 +1,1 @@
+{"is_success": "Fail", "type": "apartment_sale_price_transform", "err_msg": "Path does not exist: hdfs://localhost:9000/real_estate/apartment_price/apart_price_data_11140.csv"}

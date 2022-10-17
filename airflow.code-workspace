@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "ETL"
+		},
+		{
+			"path": "REST"
+		},
+		{
+			"path": "airflow"
+		}
+	],
+	"settings": {}
+}

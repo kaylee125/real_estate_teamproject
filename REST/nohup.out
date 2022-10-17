@@ -1,0 +1,302 @@
+[2022-10-06 11:31:55 +0900] [6552] [INFO] Starting gunicorn 20.1.0
+[2022-10-06 11:31:55 +0900] [6552] [INFO] Listening at: http://0.0.0.0:8000 (6552)
+[2022-10-06 11:31:55 +0900] [6552] [INFO] Using worker: sync
+[2022-10-06 11:31:55 +0900] [6554] [INFO] Booting worker with pid: 6554
+Internal Server Error: /api/real_estate/accsellbuytype/
+Traceback (most recent call last):
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/oracle/base.py", line 556, in execute
+    return self.cursor.execute(query, self._param_generator(params))
+cx_Oracle.DatabaseError: ORA-00904: "ACC_SELL_BUY_TYPE"."ASBT_IDX": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/big/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/big/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/big/study/REST/rest_api/views.py", line 563, in list
+    return JsonResponse(serializer.data, safe=False)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/oracle/base.py", line 556, in execute
+    return self.cursor.execute(query, self._param_generator(params))
+django.db.utils.DatabaseError: ORA-00904: "ACC_SELL_BUY_TYPE"."ASBT_IDX": invalid identifier
+Internal Server Error: /api/real_estate/accsellbuysexsido/
+Traceback (most recent call last):
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/oracle/base.py", line 556, in execute
+    return self.cursor.execute(query, self._param_generator(params))
+cx_Oracle.DatabaseError: ORA-00904: "ACC_SELL_BUY_SEX_SIDO"."ASBSS_IDX": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/big/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/big/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/big/study/REST/rest_api/views.py", line 869, in list
+    return JsonResponse(serializer.data, safe=False)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/oracle/base.py", line 556, in execute
+    return self.cursor.execute(query, self._param_generator(params))
+django.db.utils.DatabaseError: ORA-00904: "ACC_SELL_BUY_SEX_SIDO"."ASBSS_IDX": invalid identifier
+Internal Server Error: /api/real_estate/accsellbuyages/
+Traceback (most recent call last):
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/oracle/base.py", line 556, in execute
+    return self.cursor.execute(query, self._param_generator(params))
+cx_Oracle.DatabaseError: ORA-00904: "ACC_SELL_BUY_AGES"."ASBA_IDX": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/big/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/big/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/big/study/REST/rest_api/views.py", line 678, in list
+    return JsonResponse(serializer.data, safe=False)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/oracle/base.py", line 556, in execute
+    return self.cursor.execute(query, self._param_generator(params))
+django.db.utils.DatabaseError: ORA-00904: "ACC_SELL_BUY_AGES"."ASBA_IDX": invalid identifier
+Internal Server Error: /api/real_estate/accsellbuyadrs/
+Traceback (most recent call last):
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/oracle/base.py", line 556, in execute
+    return self.cursor.execute(query, self._param_generator(params))
+cx_Oracle.DatabaseError: ORA-00904: "ACC_SELL_BUY_ADRS"."ASBA_IDX": invalid identifier
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/big/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/big/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/big/study/REST/rest_api/views.py", line 445, in list
+    return JsonResponse(serializer.data, safe=False)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/big/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/big/.local/lib/python3.8/site-packages/django/db/backends/oracle/base.py", line 556, in execute
+    return self.cursor.execute(query, self._param_generator(params))
+django.db.utils.DatabaseError: ORA-00904: "ACC_SELL_BUY_ADRS"."ASBA_IDX": invalid identifier
+[2022-10-06 13:14:39 +0900] [20055] [INFO] Starting gunicorn 20.1.0
+[2022-10-06 13:14:39 +0900] [20055] [ERROR] Connection in use: ('', 8000)
+[2022-10-06 13:14:39 +0900] [20055] [ERROR] Retrying in 1 second.
+[2022-10-06 13:14:40 +0900] [20055] [ERROR] Connection in use: ('', 8000)
+[2022-10-06 13:14:40 +0900] [20055] [ERROR] Retrying in 1 second.
+[2022-10-06 13:14:41 +0900] [20055] [ERROR] Connection in use: ('', 8000)
+[2022-10-06 13:14:41 +0900] [20055] [ERROR] Retrying in 1 second.
+[2022-10-06 13:14:42 +0900] [20055] [ERROR] Connection in use: ('', 8000)
+[2022-10-06 13:14:42 +0900] [20055] [ERROR] Retrying in 1 second.
+[2022-10-06 13:14:43 +0900] [20055] [ERROR] Connection in use: ('', 8000)
+[2022-10-06 13:14:43 +0900] [20055] [ERROR] Retrying in 1 second.
+[2022-10-06 13:14:44 +0900] [20055] [ERROR] Can't connect to ('', 8000)
+[2022-10-06 04:16:10 +0000] [6554] [INFO] Parent changed, shutting down: <Worker 6554>
+[2022-10-06 04:16:10 +0000] [6554] [INFO] Worker exiting (pid: 6554)
+[2022-10-06 19:07:42 +0900] [1325] [INFO] Starting gunicorn 20.1.0
+[2022-10-06 19:07:42 +0900] [1325] [INFO] Listening at: http://0.0.0.0:8000 (1325)
+[2022-10-06 19:07:42 +0900] [1325] [INFO] Using worker: sync
+[2022-10-06 19:07:42 +0900] [1327] [INFO] Booting worker with pid: 1327
+Not Found: /favicon.ico
+[2022-10-06 19:38:51 +0900] [1325] [INFO] Handling signal: hup
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/big/.local/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/big/.local/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/big/.local/lib/python3.8/site-packages/gunicorn/app/base.py", line 231, in run
+    super().run()
+  File "/home/big/.local/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/big/.local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 223, in run
+    self.log.info("Handling signal: %s", signame)
+  File "/home/big/.local/lib/python3.8/site-packages/gunicorn/glogging.py", line 264, in info
+    self.error_log.info(msg, *args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1446, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 954, in handle
+    self.emit(record)
+  File "/usr/lib/python3.8/logging/__init__.py", line 1089, in emit
+    self.flush()
+  File "/usr/lib/python3.8/logging/__init__.py", line 1069, in flush
+    self.stream.flush()
+  File "/home/big/.local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/big/.local/lib/python3.8/site-packages/gunicorn/arbiter.py", line 530, in reap_workers
+    self.log.warning(
+  File "/home/big/.local/lib/python3.8/site-packages/gunicorn/glogging.py", line 261, in warning
+    self.error_log.warning(msg, *args, **kwargs)
+Message: 'Worker with pid %s was terminated due to signal %s'
+Arguments: (1327, 1)
+[2022-10-06 19:38:51 +0900] [1325] [INFO] Hang up: Master
+[2022-10-06 19:38:51 +0900] [22264] [INFO] Booting worker with pid: 22264
+[2022-10-06 10:59:37 +0000] [22264] [INFO] Parent changed, shutting down: <Worker 22264>
+[2022-10-06 10:59:37 +0000] [22264] [INFO] Worker exiting (pid: 22264)
